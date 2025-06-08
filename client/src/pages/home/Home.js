@@ -11,8 +11,10 @@ export default function Home() {
     const fetchProducts = async () => {
       try {
         const data = await getProducts();
+        console.log("Fetched products data:", data);
         setProducts(data);
       } catch (error) {
+        console.error("Error fetching products:", error);
         alert("Không lấy được danh sách sản phẩm");
       }
     };
